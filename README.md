@@ -12,7 +12,7 @@ Basic Docker image for Wine.
 To build the Docker image, please run the following command.
 
 ```bash
-$ docker build -f wine.Dockerfile --tag=wine:20.04 .
+$ docker build -f wine.Dockerfile --tag=wine:22.04 .
 ```
 
 ### Run Docker Container
