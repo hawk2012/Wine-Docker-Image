@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/cuda:11.4.2-runtime-ubuntu20.04
+FROM ubuntu
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -16,7 +16,7 @@ RUN apt-get update -y && \
 RUN dpkg --add-architecture i386 && \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
     mv winehq.key /usr/share/keyrings/winehq-archive.key && \
-    wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources && \
+    wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources && \
     mv winehq-focal.sources /etc/apt/sources.list.d/ && \
     apt-get update -y && \
     # Wine 8.0 stable has some issues with some games I tested
