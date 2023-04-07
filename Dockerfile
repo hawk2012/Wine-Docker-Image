@@ -7,7 +7,7 @@ RUN apt-get update -y && \
         software-properties-common \
         ca-certificates \
         language-pack-en \
-        language-pack-zh-han* \
+        language-pack-ru \
         locales \
         locales-all \
         wget
