@@ -11,6 +11,8 @@ RUN apt-get update -y && \
         locales \
         locales-all \
         dirmngr \
+        gpg \
+        gpg-agent \
         wget
 
 # Install Wine
