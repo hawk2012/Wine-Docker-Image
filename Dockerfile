@@ -19,8 +19,8 @@ RUN dpkg --add-architecture i386 && \
     wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources && \
     mv winehq-focal.sources /etc/apt/sources.list.d/ && \
     apt-get update -y && \
-    # Wine 7.0 stable has some issues with some games I tested
-    # Use Wine 7.11 staging instead
+    # Wine 8.0 stable has some issues with some games I tested
+    # Use Wine 8.0 staging instead
     apt-get install -y --install-recommends winehq-staging
 
 # GStreamer plugins
@@ -60,7 +60,7 @@ RUN apt-get update -y && \
 # Install driver for Intel HD graphics
 RUN apt-get -y install libgl1-mesa-glx libgl1-mesa-dri
 
-ENV LC_ALL zh_CN.UTF-8
-ENV LANG zh_CN.UTF-8
+ENV LC_ALL ru_RU.UTF-8
+ENV LANG ru_RU.UTF-8
 # Make sure the terminal is still English
 ENV LANGUAGE en_US.UTF-8
