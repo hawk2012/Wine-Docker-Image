@@ -10,6 +10,7 @@ RUN apt-get update -y && \
         language-pack-ru \
         locales \
         locales-all \
+        dirmngr \
         wget
 
 # Install Wine
