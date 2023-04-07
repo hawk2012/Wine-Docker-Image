@@ -30,7 +30,7 @@ $ docker run \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
     -v $(pwd):/mnt \
-    wine:20.04
+    wine:22.04
 $ xhost -
 ```
 
