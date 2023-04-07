@@ -17,7 +17,7 @@ RUN dpkg --add-architecture i386 && \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
     mv winehq.key /usr/share/keyrings/winehq-archive.key && \
     wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources && \
-    mv winehq-focal.sources /etc/apt/sources.list.d/ && \
+    mv winehq-jammy.sources /etc/apt/sources.list.d/ && \
     apt-get update -y && \
     # Wine 8.0 stable has some issues with some games I tested
     # Use Wine 8.0 staging instead
