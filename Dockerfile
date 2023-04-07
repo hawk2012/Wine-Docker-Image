@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM nvcr.io/nvidia/cuda:11.8.0-base-ubuntu22.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
