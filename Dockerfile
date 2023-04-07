@@ -17,14 +17,13 @@ RUN apt-get update -y && \
 
 # Install Wine
 RUN dpkg --add-architecture i386 && \
-    wget -nc https://dl.winehq.org/wine-builds/winehq.key && \
-    mv winehq.key /usr/share/keyrings/winehq-archive.key && \
-    wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources && \
-    mv winehq-jammy.sources /etc/apt/sources.list.d/ && \
-    apt-get update -y && \
-    # Wine 8.0 stable has some issues with some games I tested
-    # Use Wine 8.0 staging instead
-    apt-get install -y --install-recommends winehq-staging
+mkdir -pm755 /etc/apt/keyrings && \
+wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key && \
+wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources && \
+apt-get update -y && \
+# Wine 8.0 stable has some issues
+# Use Wine 8.0 staging instead
+apt-get install -y --install-recommends winehq-staging winetricks
 
 # GStreamer plugins
 RUN apt-get update -y && \
